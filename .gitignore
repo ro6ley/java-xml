@@ -14,4 +14,5 @@
 .sts4-cache
 
 # Extra
-blog
+blog/
+bin/
