@@ -5,11 +5,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-
-import com.stackabuse.PhoneDetails;
 
 /**
  * Main class to house the functions to serialize and deserialize our Java
@@ -24,8 +24,11 @@ public class App {
     public static void serializeToXML() {
         try {
             XmlMapper xmlMapper = new XmlMapper();
+            List<String> otherPhones = Arrays.asList("OnePlus 6T", "OnePlus 5T", "OnePlus 5");
+            Manufacturer manufacturer = new Manufacturer("OnePlus", "China", otherPhones);
             // serialize our Object into XML string
-            String xmlString = xmlMapper.writeValueAsString(new PhoneDetails("OnePlus", "6.4", "6/64 GB"));
+            String xmlString = xmlMapper
+                    .writeValueAsString(new PhoneDetails("OnePlus", "6.4", "6/64 GB", manufacturer));
             // write to the console
             System.out.println(xmlString);
 
@@ -61,6 +64,10 @@ public class App {
             System.out.println("\tName: " + deserializedData.getName());
             System.out.println("\tMemory: " + deserializedData.getMemory());
             System.out.println("\tDisplay Size: " + deserializedData.getDisplaySize());
+            System.out.println("\tManufacturer Name: " + deserializedData.getManufacturer().getName());
+            System.out.println("\tManufacturer Country: " + deserializedData.getManufacturer().getCountry());
+            System.out.println(
+                    "\tManufacturer Other Phones: " + deserializedData.getManufacturer().getPhone().toString());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -68,12 +75,10 @@ public class App {
     }
 
     public static void main(String[] args) {
-
         System.out.println("Serializing to XML...\n");
         serializeToXML();
-
+        
         System.out.println("\nDeserializing from XML...\n");
         deserializeFromXML();
-
     }
 }
