@@ -1,5 +1,1 @@
-<PhoneDetails>
-  <internal_memory>6/64 GB</internal_memory>
-  <display_size>6.4</display_size>
-  <phone_name>OnePlus</phone_name>
-</PhoneDetails>
+<PhoneDetails><internal_memory>6/64 GB</internal_memory><display_size>6.4</display_size><phone_name>OnePlus</phone_name><manufacturer><manufacturer_name>OnePlus</manufacturer_name><country>China</country><other_phones><phone>OnePlus 6T</phone><phone>OnePlus 5T</phone><phone>OnePlus 5</phone></other_phones></manufacturer></PhoneDetails>
