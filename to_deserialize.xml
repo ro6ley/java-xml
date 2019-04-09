@@ -1,5 +1,14 @@
 <PhoneDetails>
-  <phone_name>iPhone X</phone_name>
+  <internal_memory>3/64 GB</internal_memory>
   <display_size>6.2</display_size>
-  <internal_memory>6364 GB</internal_memory>
+  <phone_name>iPhone X</phone_name>
+  <manufacturer>
+    <manufacturer_name>Apple</manufacturer_name>
+    <country>USA</country>
+    <other_phones>
+      <phone>iPhone 8</phone>
+      <phone>iPhone 7</phone>
+      <phone>iPhone 6</phone>
+    </other_phones>
+  </manufacturer>
 </PhoneDetails>
