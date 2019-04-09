@@ -1,2 +1,17 @@
-target/
-blog/
+.DS_Store
+
+# Folders
+.idea
+.vscode
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# Extra
+blog
